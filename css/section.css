@@ -1,0 +1,30 @@
+.section__paragraph {
+    font-weight: bold;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: 20px;
+}
+
+.section__tableContainer {
+    overflow-x: auto;
+    margin-top: 40px;
+}
+
+.section__table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.section__tableCell {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+}
+
+.section__tableCell:hover {
+    background-color: rgba(252, 157, 193, 0.822)
+}
+
+.section__tableHeader {
+    background-color: rgba(255, 169, 184, 0.644);
+}

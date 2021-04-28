@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator walut</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/section.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+</head>
+
+<body class="body">
+    <header class="header">
+        <img src="images/logo.png" alt="logo" height="100">
+        <h1 class="header__title">Currency Exchange</h1>
+        <p class="header__description">live, fast, easy</p>
+    </header>
+    <main class="main">
+        <form class="js-form form">
+            <label class="form__label"><span class="form__labelText" for="baseCurrencyID">Wybierz walute
+                    bazową:*</span>
+                <select id="baseCurrencyID" class="js-baseCurrency" name="baseCurrency">
+                    <option value="pln" selected>PLN</option>
+                    <option value="eur">EUR</option>
+                    <option value="usd">USD</option>
+                    <option value="gbp">GBP</option>
+                </select>
+            </label>
+            <label class="form__label">
+                <input class="js-valueFrom form__field" type="number" name="baseCurrencyValue" step="0.01" min="1"
+                    max="1000000000000" placeholder="Mam" required>
+            </label>
+            <label for="futureCurrencyID" class="form__label"> <span class="form__labelText">Wybierz walute, na
+                    która chcesz
+                    zamienić:</span>
+                <select class="js-futureCurrency" name="futureCurrency" id="futureCurrencyID">
+                    <option value="pln">PLN</option>
+                    <option value="eur" selected>EUR</option>
+                    <option value="usd">USD</option>
+                    <option value="gbp">GBP</option>
+                </select>
+            </label>
+            <label class="form__label">
+                <input class="js-valueTo form__field" type="number" name="futureCurrencyValue" placeholder="Otrzymam"
+                    value="" disabled>
+            </label>
+            <br>
+            <button class="js-submit form__button">Oblicz</button>
+            <button class="js-reset form__button" type="reset">Zresetuj </button>
+
+            <p class="section__paragraph">Wynik: <span class="textResult">N/A</span></p>
+        </form>
+    </main>
+
+    <section class="section">
+        <h2 class="section__header">Aktualne krusy:</h2>
+        <div class="section__tableContainer">
+            <table class="section__table">
+                <tr>
+                    <th class="section__tableCell section__tableHeader" scope="col">Waluta</th>
+                    <th class="section__tableCell section__tableHeader" scope="col">kurs PLN</th>
+                </tr>
+                <tr>
+                    <th class="section__tableCell section__tableHeader" scope="row">EUR</th>
+                    <td class="section__tableCell"><span class="js-currencyEUR"></span></td>
+                </tr>
+                <tr>
+                    <th class="section__tableCell section__tableHeader" scope="row">USD</th>
+                    <td class="section__tableCell"><span class="js-currencyUSD"></span></td>
+                </tr>
+                <tr>
+                    <th class="section__tableCell section__tableHeader" scope="row">GBP</th>
+                    <td class="section__tableCell"><span class="js-currencyGBP"></span></td>
+                </tr>
+
+
+            </table>
+        </div>
+    </section>
+    </main>
+    <footer class="footer">
+        <p>Copyright @ D.B</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+.form {
+    text-align: center;
+    font-size: 18px;
+}
+
+.form__labelText {
+    max-width: 300px;
+    width: 100%;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+.form__field {
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 200px;
+    width: 100%;
+}
+
+.form__button {
+    margin: 30px 10px 15px 10px;
+    width: 35%;
+    background-color: pink;
+    padding: 10px 0;
+    box-shadow: 0px 5px 19px -6px #BCBCBC;
+}
+
+.form__button:hover {
+    background-color: rgba(252, 157, 193, 0.822);
+}
