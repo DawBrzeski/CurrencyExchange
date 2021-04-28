@@ -14,7 +14,7 @@ Supportd currencies:
 - USD
 - GBP
 
-*On this moment we must put rates into javascript, future API. 
+*On this moment we have to put rates into javascript, future API. 
 
 ## TECHNOLOGIES: 
 - HTML
