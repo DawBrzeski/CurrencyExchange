@@ -1,94 +1,111 @@
-//Obecne kursy walut 
-let EURPLN = 4.57;
-let USDPLN = 3.82;
-let GBPPLN = 5.24;
-//Inne kursy walut 
-let EURUSD = (EURPLN / USDPLN).toFixed(2);
-let EURGBP = (EURPLN / GBPPLN).toFixed(2);
+{
+    const EURPLN = 4.57;
+    const USDPLN = 3.82;
+    const GBPPLN = 5.24;
 
-let USDEUR = (USDPLN / EURPLN).toFixed(2);
-let USDGBP = (USDPLN / GBPPLN).toFixed(2);
-
-let GBPEUR = (GBPPLN / EURPLN).toFixed(2);
-let GBPUSD = (GBPPLN / USDPLN).toFixed(2);
-
-let PLNEUR = (1 / EURPLN).toFixed(2);
-let PLNUSD = (1 / USDPLN).toFixed(2);
-let PLNGBP = (1 / GBPPLN).toFixed(2);
-//
-
-let currencyEUR = document.querySelector(".js-currencyEUR");
-let currencyGBP = document.querySelector(".js-currencyGBP");
-let currencyUSD = document.querySelector(".js-currencyUSD");
-
-currencyEUR.innerText = EURPLN;
-currencyUSD.innerText = USDPLN;
-currencyGBP.innerText = GBPPLN;
-
-/// Dla danych wyborów oblicz dana walute:
+    const calculateResult = (baseCurrency, futureCurrency, currencyFrom) => {
 
 
-let formElement = document.querySelector(".js-form");
-let baseCurrencyElement = document.querySelector(".js-baseCurrency");
-let valueFromElement = document.querySelector(".js-valueFrom");
+        const EURUSD = (EURPLN / USDPLN).toFixed(2);
+        const EURGBP = (EURPLN / GBPPLN).toFixed(2);
+        const USDEUR = (USDPLN / EURPLN).toFixed(2);
+        const USDGBP = (USDPLN / GBPPLN).toFixed(2);
+        const GBPEUR = (GBPPLN / EURPLN).toFixed(2);
+        const GBPUSD = (GBPPLN / USDPLN).toFixed(2);
+        const PLNEUR = (1 / EURPLN).toFixed(2);
+        const PLNUSD = (1 / USDPLN).toFixed(2);
+        const PLNGBP = (1 / GBPPLN).toFixed(2);
 
-let futureCurrencyElement = document.querySelector(".js-futureCurrency");
-let valueToElement = document.querySelector(".js-valueTo")
-let textResult = document.querySelector(".textResult");
 
 
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
-    let baseCurrency = baseCurrencyElement.value;
-    let currencyFrom = +valueFromElement.value;
-    let futureCurrency = futureCurrencyElement.value;
-    let result = 0;
 
-    if (baseCurrency === "pln" && futureCurrency === "eur") {
-        result = currencyFrom * PLNEUR;
-    } else if (baseCurrency === "pln" && futureCurrency === "usd") {
-        result = currencyFrom * PLNUSD;
-    } else if (baseCurrency === "pln" && futureCurrency === "gbp") {
-        result = currencyFrom * PLNGBP;
-    } else if (baseCurrency === "pln" && futureCurrency === "pln") {
-        result = currencyFrom;
-    } else if (baseCurrency === "eur" && futureCurrency === "pln") {
-        result = currencyFrom * EURPLN;
-    } else if (baseCurrency === "eur" && futureCurrency === "eur") {
-        result = currencyFrom;
-    } else if (baseCurrency === "eur" && futureCurrency === "usd") {
-        result = currencyFrom * EURUSD;
-    } else if (baseCurrency === "eur" && futureCurrency === "gbp") {
-        result = currencyFrom * EURGBP;
-    } else if (baseCurrency === "usd" && futureCurrency === "pln") {
-        result = currencyFrom * USDPLN;
-    }
-    else if (baseCurrency === "usd" && futureCurrency === "usd") {
-        result = currencyFrom;
-    } else if (baseCurrency === "usd" && futureCurrency === "eur") {
-        result = currencyFrom * USDEUR;
-    }
-    else if (baseCurrency === "usd" && futureCurrency === "gbp") {
-        result = currencyFrom * USDGBP;
-    }
-    else if (baseCurrency === "gbp" && futureCurrency === "pln") {
-        result = currencyFrom * GBPPLN;
-    } else if (baseCurrency === "gbp" && futureCurrency === "eur") {
-        result = currencyFrom * GBPEUR;
-    } else if (baseCurrency === "gbp" && futureCurrency === "usd") {
-        result = currencyFrom * GBPUSD;
-    } else if (baseCurrency === "gbp" && futureCurrency === "gbp") {
-        result = currencyFrom;
-    }
+        if (baseCurrency === "pln" && futureCurrency === "eur") {
+            return result = currencyFrom * PLNEUR;
+        } else if (baseCurrency === "pln" && futureCurrency === "usd") {
+            return result = currencyFrom * PLNUSD;
+        } else if (baseCurrency === "pln" && futureCurrency === "gbp") {
+            return result = currencyFrom * PLNGBP;
+        } else if (baseCurrency === "pln" && futureCurrency === "pln") {
+            return result = currencyFrom;
+        } else if (baseCurrency === "eur" && futureCurrency === "pln") {
+            return result = currencyFrom * EURPLN;
+        } else if (baseCurrency === "eur" && futureCurrency === "eur") {
+            return result = currencyFrom;
+        } else if (baseCurrency === "eur" && futureCurrency === "usd") {
+            return result = currencyFrom * EURUSD;
+        } else if (baseCurrency === "eur" && futureCurrency === "gbp") {
+            return result = currencyFrom * EURGBP;
+        } else if (baseCurrency === "usd" && futureCurrency === "pln") {
+            return result = currencyFrom * USDPLN;
+        }
+        else if (baseCurrency === "usd" && futureCurrency === "usd") {
+            return result = currencyFrom;
+        } else if (baseCurrency === "usd" && futureCurrency === "eur") {
+            return result = currencyFrom * USDEUR;
+        }
+        else if (baseCurrency === "usd" && futureCurrency === "gbp") {
+            return result = currencyFrom * USDGBP;
+        }
+        else if (baseCurrency === "gbp" && futureCurrency === "pln") {
+            return result = currencyFrom * GBPPLN;
+        } else if (baseCurrency === "gbp" && futureCurrency === "eur") {
+            return result = currencyFrom * GBPEUR;
+        } else if (baseCurrency === "gbp" && futureCurrency === "usd") {
+            return result = currencyFrom * GBPUSD;
+        } else if (baseCurrency === "gbp" && futureCurrency === "gbp") {
+            return result = currencyFrom;
+        }
 
-    valueToElement.value = result.toFixed(2);
-    //textResult.innerText = "Za " + currencyFrom.toFixed(2) + " " + baseCurrency.toUpperCase() + " dostaniesz " + result.toFixed(2) + " " + futureCurrency.toUpperCase(); //alternatywnie
-    textResult.innerText = ` Za ${currencyFrom.toFixed(2)} ${baseCurrency.toUpperCase()} dostaniesz ${+result.toFixed(2)} ${futureCurrency.toUpperCase()}`;
-});
+    };
 
-let reset = document.querySelector(".js-reset");
+    const ratesUpdate = () => {
+        const currencyEUR = document.querySelector(".js-currencyEUR");
+        const currencyGBP = document.querySelector(".js-currencyGBP");
+        const currencyUSD = document.querySelector(".js-currencyUSD");
 
-reset.addEventListener("click", () => {
-    textResult.innerText = "N/A";
-})
+        currencyEUR.innerText = EURPLN;
+        currencyUSD.innerText = USDPLN;
+        currencyGBP.innerText = GBPPLN;
+    };
+    ratesUpdate();
 
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+        const valueToElement = document.querySelector(".js-valueTo")
+
+        const valueFromElement = document.querySelector(".js-valueFrom");
+        const baseCurrencyElement = document.querySelector(".js-baseCurrency");
+        const futureCurrencyElement = document.querySelector(".js-futureCurrency");
+        const baseCurrency = baseCurrencyElement.value;
+        const currencyFrom = +valueFromElement.value;
+        const futureCurrency = futureCurrencyElement.value;
+
+
+        let result = calculateResult(baseCurrency, futureCurrency, currencyFrom);
+
+        valueToElement.value = result.toFixed(2);
+        updateResultText(currencyFrom, baseCurrency, result, futureCurrency);
+
+    };
+
+    const updateResultText = (currencyFrom, baseCurrency, result, futureCurrency) => {
+        const textResult = document.querySelector(".textResult")
+        textResult.innerText = ` Za ${currencyFrom.toFixed(2)} ${baseCurrency.toUpperCase()} dostaniesz ${+result.toFixed(2)} ${futureCurrency.toUpperCase()}`;
+    };
+
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
+
+        formElement.addEventListener("submit", onFormSubmit);
+
+        const reset = document.querySelector(".js-reset");
+        reset.addEventListener("click", () => {
+            const textResult = document.querySelector(".textResult")
+            textResult.innerText = "N/A";
+        });
+
+
+    };
+    init();
+
+}
