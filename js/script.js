@@ -90,7 +90,7 @@
 
     const updateResultText = (currencyFrom, baseCurrency, result, futureCurrency) => {
         const textResult = document.querySelector(".textResult")
-        textResult.innerText = ` Za ${currencyFrom.toFixed(2)} ${baseCurrency.toUpperCase()} dostaniesz ${+result.toFixed(2)} ${futureCurrency.toUpperCase()}`;
+        textResult.innerHTML = ` Za <strong>${currencyFrom.toFixed(2)} ${baseCurrency.toUpperCase()} </strong> dostaniesz <strong>${+result.toFixed(2)} ${futureCurrency.toUpperCase()}</strong>`;
     };
 
     const init = () => {
